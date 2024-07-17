@@ -40,4 +40,26 @@ mvn clean install
 ```bash
 mvn spring-boot:run
 ```
+
+
+
+
 The application will start and be available at http://localhost:8080.
+
+
+
+## API Endpoints
+#### 1. Retrieve Loan Account Details
+```json
+GET /api/loan_account/{accountNumber}
+```
+Example: http://localhost:8080/api/loan_account/123456
+#### Response:
+
+```json
+{
+ "loanAccountNumber": "123456",
+ "dueDate": "2023-06-15",
+ "emiAmount": 2500
+}
+```
